@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 
-public class Dijkstra {
+public class Practice2 {
     static int min = Integer.MAX_VALUE;
     static int n, k;
     static int max = 100000;
@@ -19,8 +19,8 @@ public class Dijkstra {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        n = Integer.parseInt(st.nextToken());
-        k = Integer.parseInt(st.nextToken());
+        n = Integer.parseInt(st.nextToken()); // 처음 시작 위치
+        k = Integer.parseInt(st.nextToken()); // 동생 위치
 
         visit = new boolean[max + 1];
         bfs();
@@ -38,8 +38,7 @@ public class Dijkstra {
             if (node.loc == k) {
                 min = Math.min(min, node.time);
             }
-
-            if (node.loc * 2 <= max && visit[node.loc * 2] == false){
+            if (node.loc * 2 <= max && visit[node.loc * 2] == false){ //순간이동한거라 +1 안함
                 q.offer(new Node(node.loc * 2, node.time));
             }
             if (node.loc + 1 <= max && visit[node.loc + 1] == false){
