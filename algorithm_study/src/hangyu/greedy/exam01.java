@@ -1,4 +1,5 @@
 //점프를 하여 마지막 인덱스에 도달할 수 있는 지 없는 지..
+//https://leetcode.com/problems/jump-game/
 package hangyu.greedy;
 
 public class exam01 {
