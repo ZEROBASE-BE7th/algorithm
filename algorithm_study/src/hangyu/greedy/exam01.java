@@ -15,10 +15,6 @@ public class exam01 {
     }
 
     public static boolean canJump(int[] nums) {
-
-        if(nums[0] == 0) {
-            return false;
-        }
         int pos = nums[0];
         for (int i = 0; i < nums.length; i++) {
             if(pos < i) {
