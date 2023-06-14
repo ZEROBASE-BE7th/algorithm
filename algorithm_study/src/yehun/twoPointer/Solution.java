@@ -25,9 +25,9 @@ public class Solution {
     }
 
     private static int solution(int[] arr, int m) {
-        int count = 0;
-        int start = 0;
-        int end = 0;
+        int count = 0; //경우의 수
+        int start = 0; //시작 포인터
+        int end = 0; //두번째 포인터
         int len = arr.length;
         int sum = 0;
 
@@ -44,8 +44,6 @@ public class Solution {
                 count++;
             }
         }
-
         return count;
-
     }
 }

@@ -31,7 +31,7 @@ public class zelda {
 
     static int N;
     static int[][] board;
-    final static int[][] dirs = {{1,0},{0,1},{-1,0},{0,-1}};
+    final static int[][] dirs = {{1,0},{0,1},{-1,0},{0,-1}}; //아래 //오른쪽 //위로 //왼쪽 행 열로 생각하기..
     static List<List<Node>> graph;
     static int INF = (int) 1e9;
 
@@ -113,6 +113,5 @@ public class zelda {
             int newIdx = (nx * N) + ny;
             graph.get(idx).add(new Node(newIdx, board[nx][ny]));
         }
-
     }
 }
